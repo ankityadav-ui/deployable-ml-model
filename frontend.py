@@ -3,7 +3,7 @@ import requests
 import os
 
 # Default to localhost if not specified
-API_URL = os.getenv("API_URL", "http://127.0.0.1:8000/predict")
+API_URL = "https://deployable-ml-model.onrender.com/predict"
 
 st.title("Insurance Premium Category Predictor")
 
