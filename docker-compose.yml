@@ -1,0 +1,12 @@
+services:
+  ml-app:
+    build: .
+    container_name: deployable_ml_app
+    ports:
+      - "8000:8000"  # FastAPI Backend
+      - "8501:8501"  # Streamlit Frontend
+    environment:
+      - PORT=8000
+    restart: unless-stopped
+    volumes:
+      - ./model:/app/model  # Optional: mount model for local development
